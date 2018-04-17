@@ -38,7 +38,8 @@ entity ALU is
            a : in STD_LOGIC_VECTOR (31 downto 0);
            b : in STD_LOGIC_VECTOR (31 downto 0);
            pc : in STD_LOGIC_VECTOR (31 downto 0);
-           result : out STD_LOGIC_VECTOR (31 downto 0));
+           result : out STD_LOGIC_VECTOR (31 downto 0);
+           enable_branch : out STD_LOGIC);
 end ALU;
 
 architecture Behavioral of ALU is
@@ -47,12 +48,13 @@ architecture Behavioral of ALU is
     signal reg2 : STD_LOGIC_VECTOR (31 downto 0) := "0";
     signal reg_result : STD_LOGIC_VECTOR (31 downto 0) := "0";
     
-    signal temp1 : STD_LOGIC_VECTOR (31 downto 0) := "0";
+    signal eb : STD_LOGIC := '0';
 begin
 
     reg1 <= a;
     reg2 <= b;
     result <= reg_result;
+    enable_branch <= eb;
 
     process(clk)
     begin
@@ -79,23 +81,23 @@ begin
                         reg_result <= "0";
                     end if;
                 when "01000" =>
-                        null; -- UNCONDITIONAL BRANCH HERE
+                    eb <= '1'; -- UNCONDITIONAL BRANCH HERE
                 when "01001" =>
                     if (reg1 = reg2) then
-                        null; -- BRANCH ON EQUAL WILL GO HERE
+                        eb <= '1'; -- BRANCH ON EQUAL WILL GO HERE
                     end if;
                 when "01010" =>
                     if (reg1 /= reg2) then
-                        null; -- BRANCH NOT EQUAL WILL GO HERE
+                        eb <= '1'; -- BRANCH NOT EQUAL WILL GO HERE
                     end if;
                 when "01011" =>
-                    null; -- BRANCH AND LINK WILL GO HERE
+                    eb <= '1'; -- BRANCH AND LINK WILL GO HERE
                 when "01100" =>
                     null; -- LOAD WORD WILL GO HERE
                 when "01101" =>
                     null; -- STORE WORD WILL GO HERE
                 when "01110" =>
-                    null; -- MOVE WILL GO HERE
+                    result <= a; -- MOVE WILL GO HERE
             end case;
         end if;
     end process;
