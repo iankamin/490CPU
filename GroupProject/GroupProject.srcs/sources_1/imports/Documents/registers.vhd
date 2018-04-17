@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
-CORE_CONTAINER	-- Create Date: 04/12/2018 08:52:06 PM
+-- Create Date: 04/12/2018 08:52:06 PM
 -- Design Name: 
 -- Module Name: registers - Behavioral
 -- Project Name: 
