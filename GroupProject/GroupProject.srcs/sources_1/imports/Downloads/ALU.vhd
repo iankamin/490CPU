@@ -43,11 +43,11 @@ end ALU;
 
 architecture Behavioral of ALU is
 
-    signal reg1 : STD_LOGIC_VECTOR (31 downto 0) := "0";
-    signal reg2 : STD_LOGIC_VECTOR (31 downto 0) := "0";
-    signal reg_result : STD_LOGIC_VECTOR (31 downto 0) := "0";
+    signal reg1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal reg2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal reg_result : STD_LOGIC_VECTOR (31 downto 0);
     
-    signal temp1 : STD_LOGIC_VECTOR (31 downto 0) := "0";
+    signal temp1 : STD_LOGIC_VECTOR (31 downto 0);
 begin
 
     reg1 <= a;
@@ -74,9 +74,9 @@ begin
                     reg_result <= reg1 - reg2;
                 when "00111" =>
                     if (reg1 < reg2) then
-                        reg_result <= "1";
+                        reg_result <= "00000000000000000000000000000001";
                     else
-                        reg_result <= "0";
+                        reg_result <= "00000000000000000000000000000000";
                     end if;
                 when "01000" =>
                         null; -- UNCONDITIONAL BRANCH HERE
@@ -96,6 +96,8 @@ begin
                     null; -- STORE WORD WILL GO HERE
                 when "01110" =>
                     null; -- MOVE WILL GO HERE
+                when others =>
+                    null;
             end case;
         end if;
     end process;
