@@ -38,7 +38,8 @@ entity ALU is
            a : in STD_LOGIC_VECTOR (31 downto 0);
            b : in STD_LOGIC_VECTOR (31 downto 0);
            pc : in STD_LOGIC_VECTOR (31 downto 0);
-           result : out STD_LOGIC_VECTOR (31 downto 0));
+           result : out STD_LOGIC_VECTOR (31 downto 0);
+           enable_branch: out STD_LOGIC);
 end ALU;
 
 architecture Behavioral of ALU is
@@ -48,27 +49,29 @@ architecture Behavioral of ALU is
     signal reg_result : STD_LOGIC_VECTOR (31 downto 0);
     
     signal temp1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal eb : STD_LOGIC := '0';
 begin
 
     reg1 <= a;
     reg2 <= b;
     result <= reg_result;
-
+    enable_branch <= eb;
+    
     process(clk)
     begin
         if (rising_edge(clk)) then
             case opcode is
                 when "00000" =>
                     null;
-                when "00001" =>
+                when "00001" | "10001" =>
                     reg_result <= reg1 and reg2;
                 when "00010" =>
                     reg_result <= not reg1;
                 when "00011" =>
                     reg_result <= reg1 xor reg2;
-                when "00100" =>
+                when "00100" | "10100" =>
                     reg_result <= reg1 or reg2;
-                when "00101" =>
+                when "00101" | "10101" =>
                     reg_result <= reg1 + reg2;
                 when "00110" =>
                     reg_result <= reg1 - reg2;
@@ -79,23 +82,29 @@ begin
                         reg_result <= "00000000000000000000000000000000";
                     end if;
                 when "01000" =>
-                        null; -- UNCONDITIONAL BRANCH HERE
+                    eb <= '1'; -- UNCONDITIONAL BRANCH HERE
                 when "01001" =>
                     if (reg1 = reg2) then
-                        null; -- BRANCH ON EQUAL WILL GO HERE
+                        eb <= '1'; -- BRANCH ON EQUAL WILL GO HERE
                     end if;
                 when "01010" =>
                     if (reg1 /= reg2) then
-                        null; -- BRANCH NOT EQUAL WILL GO HERE
+                        eb <= '1'; -- BRANCH NOT EQUAL WILL GO HERE
                     end if;
                 when "01011" =>
-                    null; -- BRANCH AND LINK WILL GO HERE
+                    eb <= '1'; -- BRANCH AND LINK WILL GO HERE
                 when "01100" =>
                     null; -- LOAD WORD WILL GO HERE
                 when "01101" =>
                     null; -- STORE WORD WILL GO HERE
-                when "01110" =>
-                    null; -- MOVE WILL GO HERE
+                when "01110" | "11101" =>
+                    result <= a; -- MOVE WILL GO HERE
+                when "11000" =>
+                    null;   -- LSL
+                when "11001" =>
+                    null;   -- LSR
+                when "11010" =>
+                    null;   -- ROR
                 when others =>
                     null;
             end case;
