@@ -93,17 +93,13 @@ begin
                     end if;
                 when "01011" =>
                     eb <= '1'; -- BRANCH AND LINK WILL GO HERE
-                when "01100" =>
-                    null; -- LOAD WORD WILL GO HERE
-                when "01101" =>
-                    null; -- STORE WORD WILL GO HERE
-                when "01110" | "11101" =>
+                when "01110" =>
                     result <= a; -- MOVE WILL GO HERE
-                when "11000" =>
+                when "01111" =>
                     null;   -- LSL
-                when "11001" =>
+                when "10000" =>
                     null;   -- LSR
-                when "11010" =>
+                when "10001" =>
                     null;   -- ROR
                 when others =>
                     null;
