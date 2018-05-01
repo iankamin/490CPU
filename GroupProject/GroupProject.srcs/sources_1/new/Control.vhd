@@ -69,7 +69,7 @@ begin
                 --READ INSTRUCTION FROM MEMORY
                 r_nextPC <= std_logic_vector(to_unsigned(to_integer(unsigned(r_PC)) + 4, 32));
                 v_stages := 1;
-                
+               
             elsif v_stages = 1 then --DECODE
                 case r_opcode is
                     when "00000" => --NOP
@@ -308,6 +308,7 @@ begin
         
         
                 v_stages := 0;
+        end if;
         end if;
     end process;
 
