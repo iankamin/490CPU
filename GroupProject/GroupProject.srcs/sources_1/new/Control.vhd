@@ -37,6 +37,31 @@ entity Control is
 end Control;
 
 architecture Behavioral of Control is
+Component registers
+    port(
+        I_clk         : in STD_LOGIC;
+        I_RegRD_Sel   : in STD_LOGIC_VECTOR (3 downto 0); -- bits 26-23
+        I_RegRS_Sel   : in STD_LOGIC_VECTOR (3 downto 0); -- bits 22-19
+        I_RegRT_Sel   : in STD_LOGIC_VECTOR (3 downto 0); -- bits 18-15
+        I_WriteEnable : in STD_LOGIC;
+        I_WriteData   : in STD_LOGIC_VECTOR (31 downto 0);  -- new register value
+        I_RegDst      : in STD_LOGIC;
+        O_ReadDataA   : out STD_LOGIC_VECTOR (31 downto 0); --register value
+        O_ReadDataB   : out STD_LOGIC_VECTOR (31 downto 0)  --register value 
+    );
+end component;
+
+Component ALU
+    port(
+        opcode : in STD_LOGIC_VECTOR (4 downto 0);
+        clk : in STD_LOGIC;
+        a : in STD_LOGIC_VECTOR (31 downto 0);
+        b : in STD_LOGIC_VECTOR (31 downto 0);
+        result : out STD_LOGIC_VECTOR (31 downto 0);
+        enable_branch: out STD_LOGIC
+    );
+end component;
+ 
     signal r_PC     : std_logic_vector (31 downto 0) := "0";
     signal r_nextPC : std_logic_vector (31 downto 0);
     signal r_branchPC : std_logic_vector (31 downto 0);
@@ -48,6 +73,8 @@ architecture Behavioral of Control is
     signal r_RDaddr   : std_logic_vector (15 downto 11);
     signal r_imm      : std_logic_vector (15 downto 0);
     signal r_JumpAddr : std_logic_vector (27 downto 2);
+    signal r_RSdata   : std_logic_vector (31 downto 0);
+    signal r_RTdata   : std_logic_vector (31 downto 0);
     
     --contol bits
     signal RegDST       : STD_LOGIC;
@@ -60,9 +87,40 @@ architecture Behavioral of Control is
     signal ALUsrc       : STD_LOGIC;
     signal RegWrite     : STD_LOGIC;
     
+    --ALU bit
+    signal a_branchTrue   : STD_LOGIC := '0' ;
+    signal a_result       : std_logic_vector (31 downto 0);
+  
+
+
+    
 begin
+    regFile: registers port map(
+        I_clk         => I_clk,      
+        I_RegRD_Sel   => r_RDaddr, 
+        I_RegRS_Sel   => r_RSaddr,
+        I_RegRT_Sel   => r_RTaddr,
+        I_WriteEnable => '0',
+        I_WriteData   => "00000000000000000000000000000000",
+        I_RegDst      => RegDst,
+        O_ReadDataA   => r_RSdata,
+        O_ReadDataB   => r_RTdata
+    );
+    
+    execution: ALU port map(
+        opcode  => ALUcontrol,
+        clk     => I_clk,
+        a       => r_RSdata,
+        b       => r_RTdata,
+        result  => a_result,
+        enable_branch  => a_branchTrue
+    );
+
     stages : process(I_clk)
-        variable v_stages   : natural range 0 to 4 :=0;
+    variable v_stages   : natural range 0 to 4 :=0;
+
+    
+    
     begin
         if rising_edge(I_clk) then
             if v_stages = 0 then    --INSTRUCTION FETCH
@@ -294,10 +352,10 @@ begin
                         RegWrite  <= '0';
                 end case;
                 
-                
+
                 v_stages := 2;
             elsif v_stages = 2 then --EXECUTIOM
-            
+                
                 
                 v_stages := 3;
             elsif v_stages = 3 then --MEMORY
@@ -308,7 +366,7 @@ begin
         
         
                 v_stages := 0;
-        end if;
+            end if;
         end if;
     end process;
 
