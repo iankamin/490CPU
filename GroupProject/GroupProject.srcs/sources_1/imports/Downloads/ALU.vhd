@@ -22,6 +22,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -96,11 +97,11 @@ begin
                 when "01110" =>
                     result <= a; -- MOVE WILL GO HERE
                 when "01111" =>
-                    null;   -- LSL
+                    result <= std_logic_vector(shift_left(unsigned(a), to_integer(unsigned(b)))); --LSL -- FUCK THISS
                 when "10000" =>
-                    null;   -- LSR
+                    result <= std_logic_vector(shift_right(unsigned(a), to_integer(unsigned(b))));   -- LSR
                 when "10001" =>
-                    null;   -- ROR
+                    result <= std_logic_vector(rotate_right(unsigned(a), to_integer(unsigned(b))));   -- ROR
                 when others =>
                     null;
             end case;
