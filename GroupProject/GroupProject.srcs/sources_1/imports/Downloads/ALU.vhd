@@ -64,15 +64,15 @@ begin
             case opcode is
                 when "00000" =>
                     null;
-                when "00001" | "10001" =>
+                when "00001" =>
                     reg_result <= reg1 and reg2;
                 when "00010" =>
                     reg_result <= not reg1;
                 when "00011" =>
                     reg_result <= reg1 xor reg2;
-                when "00100" | "10100" =>
+                when "00100" =>
                     reg_result <= reg1 or reg2;
-                when "00101" | "10101" =>
+                when "00101" =>
                     reg_result <= reg1 + reg2;
                 when "00110" =>
                     reg_result <= reg1 - reg2;

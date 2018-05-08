@@ -62,16 +62,16 @@ Component ALU
     );
 end component;
  
-    signal r_PC     : std_logic_vector (31 downto 0) := "0";
+    signal r_PC     : std_logic_vector (31 downto 0) := "00000000000000000000000000000000";
     signal r_nextPC : std_logic_vector (31 downto 0);
     signal r_branchPC : std_logic_vector (31 downto 0);
     
     --register sections
     signal r_opcode   : std_logic_vector (31 downto 26);
-    signal r_RSaddr   : std_logic_vector (25 downto 21);
-    signal r_RTaddr   : std_logic_vector (20 downto 16);
-    signal r_RDaddr   : std_logic_vector (15 downto 11);
-    signal r_imm      : std_logic_vector (15 downto 0);
+    signal r_RSaddr   : std_logic_vector (25 downto 22);
+    signal r_RTaddr   : std_logic_vector (21 downto 18);
+    signal r_RDaddr   : std_logic_vector (17 downto 14);
+    signal r_imm      : std_logic_vector (17 downto 0);
     signal r_JumpAddr : std_logic_vector (27 downto 2);
     signal r_RSdata   : std_logic_vector (31 downto 0);
     signal r_RTdata   : std_logic_vector (31 downto 0);
