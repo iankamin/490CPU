@@ -21,17 +21,17 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {C:/Users/Simran/Documents/UB_Stuff/CSE 490/490CPU/GroupProject/GroupProject.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/Simran/Documents/UB_Stuff/CSE 490/490CPU/GroupProject/GroupProject.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.cache/wt [current_project]
+set_property parent.project_path C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
-set_property ip_output_repo {c:/Users/Simran/Documents/UB_Stuff/CSE 490/490CPU/GroupProject/GroupProject.cache/ip} [current_project]
+set_property ip_output_repo c:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  {C:/Users/Simran/Documents/UB_Stuff/CSE 490/490CPU/GroupProject/GroupProject.srcs/sources_1/imports/Downloads/ALU.vhd}
-  {C:/Users/Simran/Documents/UB_Stuff/CSE 490/490CPU/GroupProject/GroupProject.srcs/sources_1/imports/Documents/registers.vhd}
-  {C:/Users/Simran/Documents/UB_Stuff/CSE 490/490CPU/GroupProject/GroupProject.srcs/sources_1/new/Control.vhd}
+  C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/sources_1/imports/Downloads/ALU.vhd
+  C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/sources_1/imports/Documents/registers.vhd
+  C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/sources_1/new/Control.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -41,8 +41,8 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/Simran/Documents/UB_Stuff/CSE 490/490CPU/GroupProject/GroupProject.srcs/constrs_1/imports/basys3_master/Basys3_Master.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/Simran/Documents/UB_Stuff/CSE 490/490CPU/GroupProject/GroupProject.srcs/constrs_1/imports/basys3_master/Basys3_Master.xdc}}]
+read_xdc C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/constrs_1/imports/basys3_master/Basys3_Master.xdc
+set_property used_in_implementation false [get_files C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/constrs_1/imports/basys3_master/Basys3_Master.xdc]
 
 
 synth_design -top Control -part xc7a35tcpg236-1
