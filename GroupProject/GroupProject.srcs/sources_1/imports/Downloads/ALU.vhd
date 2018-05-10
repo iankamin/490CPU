@@ -38,7 +38,6 @@ entity ALU is
            clk : in STD_LOGIC;
            a : in STD_LOGIC_VECTOR (31 downto 0);
            b : in STD_LOGIC_VECTOR (31 downto 0);
-           pc : in STD_LOGIC_VECTOR (31 downto 0);
            result : out STD_LOGIC_VECTOR (31 downto 0);
            enable_branch: out STD_LOGIC);
 end ALU;

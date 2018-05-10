@@ -82,11 +82,11 @@ end Component;
     signal r_branchPC : std_logic_vector (31 downto 0);
     signal r_stages   : integer range 0 to 4 :=0;
     --register sections
-    signal r_opcode   : std_logic_vector (31 downto 26);
-    signal r_RSaddr   : std_logic_vector (25 downto 22);
-    signal r_RTaddr   : std_logic_vector (21 downto 18);
-    signal r_RDaddr   : std_logic_vector (17 downto 14);
-    signal r_imm      : std_logic_vector (17 downto 0);
+    signal r_opcode   : std_logic_vector (31 downto 27);
+    signal r_RSaddr   : std_logic_vector (26 downto 23);
+    signal r_RTaddr   : std_logic_vector (22 downto 19);
+    signal r_RDaddr   : std_logic_vector (18 downto 15);
+    signal r_imm      : std_logic_vector (15 downto 0);
     signal r_JumpAddr : std_logic_vector (27 downto 2);
     signal r_RSdata   : std_logic_vector (31 downto 0);
     signal r_RTdata   : std_logic_vector (31 downto 0);
