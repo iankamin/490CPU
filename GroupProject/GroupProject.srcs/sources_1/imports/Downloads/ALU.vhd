@@ -46,15 +46,15 @@ architecture Behavioral of ALU is
 
     signal reg1 : STD_LOGIC_VECTOR (31 downto 0);
     signal reg2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal reg_result : STD_LOGIC_VECTOR (31 downto 0);
+    --signal result : STD_LOGIC_VECTOR (31 downto 0);
     
     signal temp1 : STD_LOGIC_VECTOR (31 downto 0);
     signal eb : STD_LOGIC := '0';
 begin
 
     reg1 <= a;
-    reg2 <= b;
-    result <= reg_result;
+    reg2 <= b; 
+    --result <= reg_result;
     enable_branch <= eb;
     
     process(clk)
@@ -64,22 +64,22 @@ begin
                 when "00000" =>
                     null;
                 when "00001" =>
-                    reg_result <= reg1 and reg2;
+                    result <= reg1 and reg2;
                 when "00010" =>
-                    reg_result <= not reg1;
+                    result <= not reg1;
                 when "00011" =>
-                    reg_result <= reg1 xor reg2;
-                when "00100" =>
-                    reg_result <= reg1 or reg2;
+                    result <= reg1 xor reg2;
+                when "10100" =>
+                    result <= reg1 or reg2;
                 when "00101" =>
-                    reg_result <= reg1 + reg2;
+                    result <= reg1 + reg2;
                 when "00110" =>
-                    reg_result <= reg1 - reg2;
+                    result <= reg1 - reg2;
                 when "00111" =>
                     if (reg1 < reg2) then
-                        reg_result <= "00000000000000000000000000000001";
+                        result <= "00000000000000000000000000000001";
                     else
-                        reg_result <= "00000000000000000000000000000000";
+                        result <= "00000000000000000000000000000000";
                     end if;
                 when "01000" =>
                     eb <= '1'; -- UNCONDITIONAL BRANCH HERE
@@ -94,13 +94,13 @@ begin
                 when "01011" =>
                     eb <= '1'; -- BRANCH AND LINK WILL GO HERE
                 when "01110" =>
-                    result <= a; -- MOVE WILL GO HERE
+                    result <= reg1; -- MOVE WILL GO HERE
                 when "01111" =>
-                    result <= std_logic_vector(shift_left(unsigned(a), to_integer(unsigned(b)))); --LSL -- FUCK THISS
+                    result <= std_logic_vector(shift_left(unsigned(reg1), to_integer(unsigned(reg2)))); --LSL -- FUCK THISS
                 when "10000" =>
-                    result <= std_logic_vector(shift_right(unsigned(a), to_integer(unsigned(b))));   -- LSR
+                    result <= std_logic_vector(shift_right(unsigned(reg1), to_integer(unsigned(reg2))));   -- LSR
                 when "10001" =>
-                    result <= std_logic_vector(rotate_right(unsigned(a), to_integer(unsigned(b))));   -- ROR
+                    result <= std_logic_vector(rotate_right(unsigned(reg1), to_integer(unsigned(reg2))));   -- ROR
                 when others =>
                     null;
             end case;
