@@ -30,6 +30,7 @@ set_property ip_output_repo c:/Users/kamin/Documents/aaaSchool/490CPU/GroupProje
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
   C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/sources_1/imports/Downloads/ALU.vhd
+  C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/sources_1/new/Opcode.vhd
   C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/sources_1/imports/Documents/registers.vhd
   C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/sources_1/new/Control.vhd
 }
