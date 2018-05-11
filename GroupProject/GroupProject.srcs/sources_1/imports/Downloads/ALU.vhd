@@ -45,7 +45,7 @@ end ALU;
 architecture Behavioral of ALU is
 
     signal reg1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal reg2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal reg2 : STD_LOGIC_VECTOR (31 downto 0); -- register/immediate
     --signal result : STD_LOGIC_VECTOR (31 downto 0);
     
     signal temp1 : STD_LOGIC_VECTOR (31 downto 0);
@@ -86,15 +86,19 @@ begin
                 when "01001" =>
                     if (reg1 = reg2) then
                         eb <= '1'; -- BRANCH ON EQUAL WILL GO HERE
+                    else
+                        eb <= '0';
                     end if;
                 when "01010" =>
                     if (reg1 /= reg2) then
                         eb <= '1'; -- BRANCH NOT EQUAL WILL GO HERE
+                    else
+                        eb <= '0';
                     end if;
                 when "01011" =>
                     eb <= '1'; -- BRANCH AND LINK WILL GO HERE
                 when "01110" =>
-                    result <= reg1; -- MOVE WILL GO HERE
+                    result <= reg2; -- MOVE WILL GO HERE
                 when "01111" =>
                     result <= std_logic_vector(shift_left(unsigned(reg1), to_integer(unsigned(reg2)))); --LSL -- FUCK THISS
                 when "10000" =>

@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18280 
+INFO: Helper process launched with PID 5632 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 358.461 ; gain = 100.305
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 359.852 ; gain = 101.246
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Control' [C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/sources_1/new/Control.vhd:39]
 WARNING: [Synth 8-5640] Port 'i_stage' is missing in component declaration [C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/sources_1/new/Control.vhd:40]
@@ -37,7 +37,7 @@ WARNING: [Synth 8-3848] Net r_RTaddr in module/entity Control does not have driv
 WARNING: [Synth 8-3848] Net r_RDaddr in module/entity Control does not have driver. [C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/sources_1/new/Control.vhd:88]
 INFO: [Synth 8-256] done synthesizing module 'Control' (4#1) [C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/sources_1/new/Control.vhd:39]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 410.195 ; gain = 152.039
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 411.574 ; gain = 152.969
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -67,7 +67,7 @@ WARNING: [Synth 8-3295] tying undriven pin opcodeFile:I_opcode[2] to constant 0 
 WARNING: [Synth 8-3295] tying undriven pin opcodeFile:I_opcode[1] to constant 0 [C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/sources_1/new/Control.vhd:134]
 WARNING: [Synth 8-3295] tying undriven pin opcodeFile:I_opcode[0] to constant 0 [C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/sources_1/new/Control.vhd:134]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 410.195 ; gain = 152.039
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 411.574 ; gain = 152.969
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -81,22 +81,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 733.082 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 733.582 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 733.082 ; gain = 474.926
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 733.582 ; gain = 474.977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 733.082 ; gain = 474.926
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 733.582 ; gain = 474.977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 733.082 ; gain = 474.926
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 733.582 ; gain = 474.977
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "RegDST" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 WARNING: [Synth 8-327] inferring latch for variable 'RegDST_reg' [C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/sources_1/new/Opcode.vhd:57]
@@ -108,7 +108,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'MemWrite_reg' [C:/Users/kam
 WARNING: [Synth 8-327] inferring latch for variable 'ALUsrc_reg' [C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/sources_1/new/Opcode.vhd:64]
 WARNING: [Synth 8-327] inferring latch for variable 'RegWrite_reg' [C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/sources_1/new/Opcode.vhd:65]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 733.082 ; gain = 474.926
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 733.582 ; gain = 474.977
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -126,17 +126,16 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
 +---Registers : 
-	               32 Bit    Registers := 2     
+	               32 Bit    Registers := 3     
 	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---RAMs : 
 	              512 Bit         RAMs := 1     
 +---Muxes : 
+	  17 Input     32 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   4 Input      3 Bit        Muxes := 3     
-	  17 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 1     
 	  17 Input      1 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 	  22 Input      1 Bit        Muxes := 4     
@@ -170,10 +169,10 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
 +---Registers : 
+	               32 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	  17 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 1     
+	  17 Input     32 Bit        Muxes := 1     
 	  17 Input      1 Bit        Muxes := 1     
 Module Opcode 
 Detailed RTL Component Info : 
@@ -195,6 +194,7 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element execution/result_reg was removed.  [C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/sources_1/imports/Downloads/ALU.vhd:67]
 WARNING: [Synth 8-6014] Unused sequential element execution/eb_reg was removed.  [C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/sources_1/imports/Downloads/ALU.vhd:58]
 INFO: [Synth 8-4471] merging register 'regFile/O_ReadDataB_reg[31:0]' into 'regFile/O_ReadDataA_reg[31:0]' [C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/sources_1/imports/Documents/registers.vhd:69]
 WARNING: [Synth 8-6014] Unused sequential element regFile/O_ReadDataB_reg was removed.  [C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.srcs/sources_1/imports/Documents/registers.vhd:69]
@@ -232,77 +232,23 @@ WARNING: [Synth 8-3332] Sequential element (regFile/O_ReadDataA_reg[3]) is unuse
 WARNING: [Synth 8-3332] Sequential element (regFile/O_ReadDataA_reg[2]) is unused and will be removed from module Control.
 WARNING: [Synth 8-3332] Sequential element (regFile/O_ReadDataA_reg[1]) is unused and will be removed from module Control.
 WARNING: [Synth 8-3332] Sequential element (regFile/O_ReadDataA_reg[0]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[31]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[30]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[29]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[28]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[27]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[26]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[25]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[24]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[23]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[22]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[21]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[20]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[19]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[18]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[17]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[16]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[15]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[14]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[13]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[12]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[11]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[10]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[9]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[8]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[7]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[6]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[5]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[4]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[3]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[2]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[1]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/result_reg[0]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[31]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[30]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[29]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[28]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[27]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[26]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[25]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[24]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[23]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[22]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[21]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[20]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[19]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[18]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[17]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[16]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[15]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[14]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[13]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[12]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[11]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[10]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[9]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[8]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[7]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[6]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[5]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[4]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[3]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[2]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[1]) is unused and will be removed from module Control.
-WARNING: [Synth 8-3332] Sequential element (execution/reg_result_reg[0]) is unused and will be removed from module Control.
 WARNING: [Synth 8-3332] Sequential element (opcodeFile/RegDST_reg) is unused and will be removed from module Control.
 WARNING: [Synth 8-3332] Sequential element (opcodeFile/Branch_reg) is unused and will be removed from module Control.
 WARNING: [Synth 8-3332] Sequential element (opcodeFile/Jump_reg) is unused and will be removed from module Control.
 WARNING: [Synth 8-3332] Sequential element (opcodeFile/MemRead_reg) is unused and will be removed from module Control.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (opcodeFile/ALUcontrol_reg[4]) is unused and will be removed from module Control.
+WARNING: [Synth 8-3332] Sequential element (opcodeFile/ALUcontrol_reg[3]) is unused and will be removed from module Control.
+WARNING: [Synth 8-3332] Sequential element (opcodeFile/ALUcontrol_reg[2]) is unused and will be removed from module Control.
+WARNING: [Synth 8-3332] Sequential element (opcodeFile/ALUcontrol_reg[1]) is unused and will be removed from module Control.
+WARNING: [Synth 8-3332] Sequential element (opcodeFile/ALUcontrol_reg[0]) is unused and will be removed from module Control.
+WARNING: [Synth 8-3332] Sequential element (opcodeFile/MemWrite_reg) is unused and will be removed from module Control.
+WARNING: [Synth 8-3332] Sequential element (opcodeFile/ALUsrc_reg) is unused and will be removed from module Control.
+WARNING: [Synth 8-3332] Sequential element (opcodeFile/RegWrite_reg) is unused and will be removed from module Control.
+WARNING: [Synth 8-3332] Sequential element (r_stages_reg[2]) is unused and will be removed from module Control.
+WARNING: [Synth 8-3332] Sequential element (r_stages_reg[1]) is unused and will be removed from module Control.
+WARNING: [Synth 8-3332] Sequential element (r_stages_reg[0]) is unused and will be removed from module Control.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 733.082 ; gain = 474.926
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 733.582 ; gain = 474.977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -312,12 +258,11 @@ ROM:
 +------------+-----------------------+---------------+----------------+
 |Module Name | RTL Object            | Depth x Width | Implemented As | 
 +------------+-----------------------+---------------+----------------+
-|ALU         | reg_result            | 32x1          | LUT            | 
+|ALU         | result                | 32x1          | LUT            | 
 |Opcode      | RegDST                | 32x1          | LUT            | 
 |Opcode      | ALUcontrol            | 32x5          | LUT            | 
 |Opcode      | ALUsrc                | 32x1          | LUT            | 
 |Opcode      | RegWrite              | 32x1          | LUT            | 
-|Control     | execution/reg_result  | 32x1          | LUT            | 
 |Control     | opcodeFile/RegDST     | 32x1          | LUT            | 
 |Control     | opcodeFile/ALUcontrol | 32x5          | LUT            | 
 |Control     | opcodeFile/ALUsrc     | 32x1          | LUT            | 
@@ -337,13 +282,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 733.082 ; gain = 474.926
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 733.582 ; gain = 474.977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 733.082 ; gain = 474.926
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 733.582 ; gain = 474.977
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -355,7 +300,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 733.082 ; gain = 474.926
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 733.582 ; gain = 474.977
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -379,7 +324,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 733.082 ; gain = 474.926
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 733.582 ; gain = 474.977
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -392,7 +337,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 733.082 ; gain = 474.926
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 733.582 ; gain = 474.977
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -404,25 +349,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 733.082 ; gain = 474.926
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 733.582 ; gain = 474.977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 733.082 ; gain = 474.926
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 733.582 ; gain = 474.977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 733.082 ; gain = 474.926
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 733.582 ; gain = 474.977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 733.082 ; gain = 474.926
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 733.582 ; gain = 474.977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -447,11 +392,11 @@ Report Instance Areas:
 |1     |top      |       |     0|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 733.082 ; gain = 474.926
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 733.582 ; gain = 474.977
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 122 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 733.082 ; gain = 152.039
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 733.082 ; gain = 474.926
+Synthesis finished with 0 errors, 0 critical warnings and 59 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 733.582 ; gain = 152.969
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 733.582 ; gain = 474.977
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -459,10 +404,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-23 Infos, 138 Warnings, 0 Critical Warnings and 0 Errors encountered.
+22 Infos, 86 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 744.270 ; gain = 497.863
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 741.469 ; gain = 495.223
 INFO: [Common 17-1381] The checkpoint 'C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.runs/synth_1/Control.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Control_utilization_synth.rpt -pb Control_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 744.270 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu May 10 13:12:32 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 741.469 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu May 10 19:35:59 2018...

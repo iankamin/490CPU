@@ -53,7 +53,7 @@ begin
         begin
             if I_stage = 1 then
                 case I_opcode is
-                    when "00000" => --NOP
+                    when "00000" => --NOP  
                         RegDST    <= '0';
                         Branch    <= '0';
                         Jump      <= '0';
@@ -63,7 +63,7 @@ begin
                         MemWrite  <= '0';
                         ALUsrc    <= '0';
                         RegWrite  <= '0';
-                    when "00001" => --AND
+                    when "00001" => --AND  
                         RegDST    <= '1';
                         Branch    <= '0';
                         Jump      <= '0';
@@ -73,7 +73,7 @@ begin
                         MemWrite  <= '0';
                         ALUsrc    <= '0';
                         RegWrite  <= '1';
-                    when "00010" => --NOT
+                    when "00010" => --NOT  
                         RegDST    <= '1';
                         Branch    <= '0';
                         Jump      <= '0';
@@ -83,7 +83,7 @@ begin
                         MemWrite  <= '0';
                         ALUsrc    <= '0';
                         RegWrite  <= '1';
-                    when "00011" => --XOR
+                    when "00011" => --XOR  
                         RegDST    <= '1';
                         Branch    <= '0';
                         Jump      <= '0';
@@ -93,7 +93,7 @@ begin
                         MemWrite  <= '0';
                         ALUsrc    <= '0';
                         RegWrite  <= '1';
-                    when "00100" => --OR
+                    when "00100" => --OR   
                         RegDST    <= '1';   
                         Branch    <= '0';
                         Jump      <= '0';
@@ -103,7 +103,7 @@ begin
                         MemWrite  <= '0';
                         ALUsrc    <= '0';
                         RegWrite  <= '1';
-                    when "00101" => --ADD
+                    when "00101" => --ADD  
                         RegDST    <= '1';   
                         Branch    <= '0';
                         Jump      <= '0';
@@ -113,7 +113,7 @@ begin
                         MemWrite  <= '0';
                         ALUsrc    <= '0';
                         RegWrite  <= '1';
-                    when "00110" => --SUB
+                    when "00110" => --SUB  
                         RegDST    <= '1';   
                         Branch    <= '0';
                         Jump      <= '0';
@@ -123,7 +123,7 @@ begin
                         MemWrite  <= '0';
                         ALUsrc    <= '0';
                         RegWrite  <= '1';
-                    when "00111" => --SLT
+                    when "00111" => --SLT  
                         RegDST    <= '1';   
                         Branch    <= '0';
                         Jump      <= '0';
@@ -133,7 +133,7 @@ begin
                         MemWrite  <= '0';
                         ALUsrc    <= '0';
                         RegWrite  <= '1';
-                    when "01000" => --JUMP
+                    when "01000" => --JUMP 
                         RegDST    <= '1';   
                         Branch    <= '0';
                         Jump      <= '1';
@@ -143,7 +143,7 @@ begin
                         MemWrite  <= '0';
                         ALUsrc    <= '0';
                         RegWrite  <= '0';
-                    when "01001" => --BEQ
+                    when "01001" => --BEQ  
                         RegDST    <= '1';   
                         Branch    <= '1';
                         Jump      <= '0';
@@ -153,7 +153,7 @@ begin
                         MemWrite  <= '0';
                         ALUsrc    <= '0';
                         RegWrite  <= '0';
-                    when "01010" => --BNE
+                    when "01010" => --BNE  
                         RegDST    <= '1';   
                         Branch    <= '1';
                         Jump      <= '0';
@@ -163,7 +163,7 @@ begin
                         MemWrite  <= '0';
                         ALUsrc    <= '0';
                         RegWrite  <= '0';
-                    when "01011" => --LW
+                    when "01011" => --LW   
                         RegDST    <= '0'; --RT
                         Branch    <= '0';
                         Jump      <= '0';
@@ -173,7 +173,7 @@ begin
                         MemWrite  <= '0'; 
                         ALUsrc    <= '1'; --offset is an immediate
                         RegWrite  <= '1'; 
-                    when "01100" => --SW
+                    when "01100" => --SW   
                         RegDST    <= '0'; --RT    
                         Branch    <= '0';
                         Jump      <= '0';
@@ -183,7 +183,7 @@ begin
                         MemWrite  <= '1';
                         ALUsrc    <= '1';
                         RegWrite  <= '0';
-                    when "01101" => --MOV
+                    when "01101" => --MOV  
                         RegDST    <= '0'; --RT    
                         Branch    <= '0';
                         Jump      <= '0';
@@ -193,7 +193,7 @@ begin
                         MemWrite  <= '0'; 
                         ALUsrc    <= '0';
                         RegWrite  <= '1';
-                    when "01110" => --ANDI
+                    when "01110" => --ANDI 
                         RegDST    <= '0'; --RT    
                         Branch    <= '0';
                         Jump      <= '0';
@@ -203,7 +203,7 @@ begin
                         MemWrite  <= '0'; 
                         ALUsrc    <= '1';
                         RegWrite  <= '1';
-                    when "01111" => --ORI
+                    when "01111" => --ORI  
                         RegDST    <= '0'; --RT    
                         Branch    <= '0';
                         Jump      <= '0';
@@ -213,7 +213,7 @@ begin
                         MemWrite  <= '0'; 
                         ALUsrc    <= '1';
                         RegWrite  <= '1';
-                    when "10000" => --ADDI
+                    when "10000" => --ADDI 
                         RegDST    <= '0'; --RT    
                         Branch    <= '0';
                         Jump      <= '0';
@@ -223,7 +223,7 @@ begin
                         MemWrite  <= '0'; 
                         ALUsrc    <= '1';
                         RegWrite  <= '1';
-                    when "10001" => --MOVI
+                    when "10001" => --MOVI 
                         RegDST    <= '0'; --RT    
                         Branch    <= '0';
                         Jump      <= '0';

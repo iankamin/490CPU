@@ -64,10 +64,9 @@ begin
                 else
                     L_registers(to_integer(unsigned(I_regRT_Sel))) <= I_WriteData;
                 end if;
-            else
-                O_ReadDataA <= L_registers(to_integer(unsigned(I_regRS_Sel)));
-                O_ReadDataB <= L_registers(to_integer(unsigned(I_regRT_Sel)));
             end if;
+                O_ReadDataA <= L_registers(to_integer(unsigned(I_regRS_Sel)));
+                O_ReadDataB <= L_registers(to_integer(unsigned(I_regRT_Sel)));            
         end if;       
     end process;
 end Behavioral;

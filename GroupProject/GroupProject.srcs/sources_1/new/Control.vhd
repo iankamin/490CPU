@@ -40,6 +40,7 @@ architecture Behavioral of Control is
 Component registers
     port(
         I_clk         : in STD_LOGIC;
+        I_stage       : in integer range 0 to 4;
         I_RegRD_Sel   : in STD_LOGIC_VECTOR (3 downto 0); -- bits 26-23
         I_RegRS_Sel   : in STD_LOGIC_VECTOR (3 downto 0); -- bits 22-19
         I_RegRT_Sel   : in STD_LOGIC_VECTOR (3 downto 0); -- bits 18-15
@@ -47,7 +48,7 @@ Component registers
         I_WriteData   : in STD_LOGIC_VECTOR (31 downto 0);  -- new register value
         I_RegDst      : in STD_LOGIC;
         O_ReadDataA   : out STD_LOGIC_VECTOR (31 downto 0); --register value
-        O_ReadDataB   : out STD_LOGIC_VECTOR (31 downto 0)  --register value 
+        O_ReadDataB   : out STD_LOGIC_VECTOR (31 downto 0)  --register value  
     );
 end component;
 
@@ -111,7 +112,8 @@ end Component;
     
 begin
     regFile: registers port map(
-        I_clk         => I_clk,      
+        I_clk         => I_clk,
+        I_stage       => r_stages,      
         I_RegRD_Sel   => r_RDaddr, 
         I_RegRS_Sel   => r_RSaddr,
         I_RegRT_Sel   => r_RTaddr,
@@ -126,7 +128,7 @@ begin
         opcode  => ALUcontrol,
         clk     => I_clk,
         a       => r_RSdata,
-        b       => r_RTdata,
+        b       => r_RTimm,
         result  => a_result,
         enable_branch  => a_branchTrue
     );
@@ -144,7 +146,12 @@ begin
         ALUsrc      => ALUsrc,
         RegWrite    => RegWrite
     );
-
+    multiplexors : process
+    begin
+        
+    end process;
+    
+    
     stages : process(I_clk)
     begin
         if rising_edge(I_clk) then
