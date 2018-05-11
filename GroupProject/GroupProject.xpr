@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2017.4.1 (64-bit)              -->
+<!-- Product Version: Vivado v2017.4 (64-bit)              -->
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="35" Path="C:/Users/kamin/Documents/aaaSchool/490CPU/GroupProject/GroupProject.xpr">
+<Project Version="7" Minor="35" Path="C:/Users/Simran/Documents/UB_Stuff/CSE 490/490CPU/GroupProject/GroupProject.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="8ace5cdf911b41cbbe71d29c30072fff"/>
@@ -33,7 +33,11 @@
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSABoardId" Val="basys3"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
+<<<<<<< HEAD
     <Option Name="WTXSimLaunchSim" Val="83"/>
+=======
+    <Option Name="WTXSimLaunchSim" Val="9"/>
+>>>>>>> e6ec1ce508315d107609446cd77abbc81bf5cc78
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
