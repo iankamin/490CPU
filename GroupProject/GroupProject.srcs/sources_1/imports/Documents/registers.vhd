@@ -37,13 +37,11 @@ entity registers is
     Port (  
         I_clk         : in STD_LOGIC;
         I_stage       : in integer range 0 to 4;
-        I_RegRD_Sel   : in STD_LOGIC_VECTOR (3 downto 0); -- bits 26-23
+        I_RegWrite_Sel   : in STD_LOGIC_VECTOR (3 downto 0); -- bits 26-23 --write Reg
         I_RegRS_Sel   : in STD_LOGIC_VECTOR (3 downto 0); -- bits 22-19
         I_RegRT_Sel   : in STD_LOGIC_VECTOR (3 downto 0); -- bits 18-15
         I_WriteEnable : in STD_LOGIC;
         I_WriteData   : in STD_LOGIC_VECTOR (31 downto 0);  -- new register value
-        I_RegDst      : in STD_LOGIC;
-      --  I_Stage       : in 
         O_ReadDataA   : out STD_LOGIC_VECTOR (31 downto 0); --register value
         O_ReadDataB   : out STD_LOGIC_VECTOR (31 downto 0)  --register value
         
@@ -58,15 +56,11 @@ begin
     reg : process(I_clk)
     begin
         if rising_edge(I_clk) then
-            if(I_writeEnable = '1') and I_stage = 4 then
-                if I_RegDst = '1' then
-                    L_registers(to_integer(unsigned(I_RegRD_Sel))) <= I_WriteData;
-                else
-                    L_registers(to_integer(unsigned(I_regRT_Sel))) <= I_WriteData;
-                end if;
+            if(I_writeEnable = '1') then
+                L_registers(to_integer(unsigned(I_RegWrite_Sel))) <= I_WriteData;
             end if;
-                O_ReadDataA <= L_registers(to_integer(unsigned(I_regRS_Sel)));
-                O_ReadDataB <= L_registers(to_integer(unsigned(I_regRT_Sel)));            
+            O_ReadDataA <= L_registers(to_integer(unsigned(I_regRS_Sel)));
+            O_ReadDataB <= L_registers(to_integer(unsigned(I_regRT_Sel)));            
         end if;       
     end process;
 end Behavioral;

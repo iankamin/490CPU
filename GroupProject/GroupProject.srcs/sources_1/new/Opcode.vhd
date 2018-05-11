@@ -51,6 +51,11 @@ architecture Behavioral of Opcode is
 begin
     opcode : process(I_stage)
         begin
+        	if I_stage = 0 then
+        		MemWrite  <= '0';
+        		RegWrite  <= '0';
+        	end if;
+        	
             if I_stage = 1 then
                 case I_opcode is
                     when "00000" => --NOP  

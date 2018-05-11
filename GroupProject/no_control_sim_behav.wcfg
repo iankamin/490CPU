@@ -3,217 +3,272 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="no_control_sim_behav.wdb" id="1">
+      <db_ref path="ControlTB_behav.wdb" id="1">
          <top_modules>
-            <top_module name="no_control_sim" />
+            <top_module name="ControlTB" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="19759320000fs"></ZoomStartTime>
-      <ZoomEndTime time="21014942777fs"></ZoomEndTime>
-      <Cursor1Time time="20221918000fs"></Cursor1Time>
+      <ZoomStartTime time="229550000fs"></ZoomStartTime>
+      <ZoomEndTime time="281450001fs"></ZoomEndTime>
+      <Cursor1Time time="3000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="178"></NameColumnWidth>
-      <ValueColumnWidth column_width="133"></ValueColumnWidth>
+      <ValueColumnWidth column_width="125"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="16" />
-   <wvobject fp_name="/no_control_sim/clk" type="logic">
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/ControlTB/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/no_control_sim/r_stages" type="other">
+   <wvobject fp_name="/ControlTB/UUT/r_stages" type="other">
       <obj_property name="ElementShortName">r_stages</obj_property>
       <obj_property name="ObjectShortName">r_stages</obj_property>
    </wvobject>
-   <wvobject fp_name="/no_control_sim/r_opcode" type="array">
-      <obj_property name="ElementShortName">r_opcode[31:27]</obj_property>
-      <obj_property name="ObjectShortName">r_opcode[31:27]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+   <wvobject type="divider" fp_name="divider55">
+      <obj_property name="label">----------------------</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="/no_control_sim/r_RSaddr" type="array">
-      <obj_property name="ElementShortName">r_RSaddr[26:23]</obj_property>
-      <obj_property name="ObjectShortName">r_RSaddr[26:23]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/no_control_sim/r_RTaddr" type="array">
-      <obj_property name="ElementShortName">r_RTaddr[22:19]</obj_property>
-      <obj_property name="ObjectShortName">r_RTaddr[22:19]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/no_control_sim/r_RDaddr" type="array">
-      <obj_property name="ElementShortName">r_RDaddr[18:15]</obj_property>
-      <obj_property name="ObjectShortName">r_RDaddr[18:15]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/no_control_sim/r_imm" type="array">
-      <obj_property name="ElementShortName">r_imm[18:0]</obj_property>
-      <obj_property name="ObjectShortName">r_imm[18:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/no_control_sim/UUTreg/L_registers" type="array">
-      <obj_property name="ElementShortName">L_registers[0:15][31:0]</obj_property>
-      <obj_property name="ObjectShortName">L_registers[0:15][31:0]</obj_property>
+   <wvobject fp_name="group160" type="group">
+      <obj_property name="label">Control</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/no_control_sim/r_RSdata" type="array">
-      <obj_property name="ElementShortName">r_RSdata[31:0]</obj_property>
-      <obj_property name="ObjectShortName">r_RSdata[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/no_control_sim/r_RTdata" type="array">
-      <obj_property name="ElementShortName">r_RTdata[31:0]</obj_property>
-      <obj_property name="ObjectShortName">r_RTdata[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/no_control_sim/r_RTimm" type="array">
-      <obj_property name="ElementShortName">r_RTimm[31:0]</obj_property>
-      <obj_property name="ObjectShortName">r_RTimm[31:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/no_control_sim/r_immSE" type="array">
-      <obj_property name="ElementShortName">r_immSE[31:0]</obj_property>
-      <obj_property name="ObjectShortName">r_immSE[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="group209" type="group">
-      <obj_property name="label">Control Bits</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/no_control_sim/RegDST" type="logic">
-         <obj_property name="ElementShortName">RegDST</obj_property>
-         <obj_property name="ObjectShortName">RegDST</obj_property>
-      </wvobject>
-      <wvobject fp_name="/no_control_sim/Branch" type="logic">
-         <obj_property name="ElementShortName">Branch</obj_property>
-         <obj_property name="ObjectShortName">Branch</obj_property>
-      </wvobject>
-      <wvobject fp_name="/no_control_sim/Jump" type="logic">
-         <obj_property name="ElementShortName">Jump</obj_property>
-         <obj_property name="ObjectShortName">Jump</obj_property>
-      </wvobject>
-      <wvobject fp_name="/no_control_sim/MemRead" type="logic">
-         <obj_property name="ElementShortName">MemRead</obj_property>
-         <obj_property name="ObjectShortName">MemRead</obj_property>
-      </wvobject>
-      <wvobject fp_name="/no_control_sim/MemtoReg" type="logic">
-         <obj_property name="ElementShortName">MemtoReg</obj_property>
-         <obj_property name="ObjectShortName">MemtoReg</obj_property>
-      </wvobject>
-      <wvobject fp_name="/no_control_sim/ALUcontrol" type="array">
-         <obj_property name="ElementShortName">ALUcontrol[4:0]</obj_property>
-         <obj_property name="ObjectShortName">ALUcontrol[4:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/no_control_sim/MemWrite" type="logic">
-         <obj_property name="ElementShortName">MemWrite</obj_property>
-         <obj_property name="ObjectShortName">MemWrite</obj_property>
-      </wvobject>
-      <wvobject fp_name="/no_control_sim/ALUsrc" type="logic">
-         <obj_property name="ElementShortName">ALUsrc</obj_property>
-         <obj_property name="ObjectShortName">ALUsrc</obj_property>
-      </wvobject>
-      <wvobject fp_name="/no_control_sim/RegWrite" type="logic">
-         <obj_property name="ElementShortName">RegWrite</obj_property>
-         <obj_property name="ObjectShortName">RegWrite</obj_property>
-      </wvobject>
-      <wvobject fp_name="/no_control_sim/a_branchTrue" type="logic">
-         <obj_property name="ElementShortName">a_branchTrue</obj_property>
-         <obj_property name="ObjectShortName">a_branchTrue</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="/no_control_sim/a_result" type="array">
-      <obj_property name="ElementShortName">a_result[31:0]</obj_property>
-      <obj_property name="ObjectShortName">a_result[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="group376" type="group">
-      <obj_property name="label">REG</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="divider" fp_name="divider215">
-         <obj_property name="label">reg</obj_property>
-         <obj_property name="DisplayName">label</obj_property>
-      </wvobject>
-      <wvobject fp_name="/no_control_sim/UUTreg/I_clk" type="logic">
+      <wvobject fp_name="/ControlTB/UUT/I_clk" type="logic">
          <obj_property name="ElementShortName">I_clk</obj_property>
          <obj_property name="ObjectShortName">I_clk</obj_property>
       </wvobject>
-      <wvobject fp_name="/no_control_sim/UUTreg/I_stage" type="other">
+      <wvobject fp_name="/ControlTB/UUT/I_opcode" type="array">
+         <obj_property name="ElementShortName">I_opcode[31:27]</obj_property>
+         <obj_property name="ObjectShortName">I_opcode[31:27]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/I_RSaddr" type="array">
+         <obj_property name="ElementShortName">I_RSaddr[26:23]</obj_property>
+         <obj_property name="ObjectShortName">I_RSaddr[26:23]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/I_RTaddr" type="array">
+         <obj_property name="ElementShortName">I_RTaddr[22:19]</obj_property>
+         <obj_property name="ObjectShortName">I_RTaddr[22:19]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/I_RDaddr" type="array">
+         <obj_property name="ElementShortName">I_RDaddr[18:15]</obj_property>
+         <obj_property name="ObjectShortName">I_RDaddr[18:15]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/I_imm" type="array">
+         <obj_property name="ElementShortName">I_imm[18:0]</obj_property>
+         <obj_property name="ObjectShortName">I_imm[18:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/r_PC" type="array">
+         <obj_property name="ElementShortName">r_PC[31:0]</obj_property>
+         <obj_property name="ObjectShortName">r_PC[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/r_nextPC" type="array">
+         <obj_property name="ElementShortName">r_nextPC[31:0]</obj_property>
+         <obj_property name="ObjectShortName">r_nextPC[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/r_branchPC" type="array">
+         <obj_property name="ElementShortName">r_branchPC[31:0]</obj_property>
+         <obj_property name="ObjectShortName">r_branchPC[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/r_stages" type="other">
+         <obj_property name="ElementShortName">r_stages</obj_property>
+         <obj_property name="ObjectShortName">r_stages</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/r_opcode" type="array">
+         <obj_property name="ElementShortName">r_opcode[31:27]</obj_property>
+         <obj_property name="ObjectShortName">r_opcode[31:27]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/r_RSaddr" type="array">
+         <obj_property name="ElementShortName">r_RSaddr[26:23]</obj_property>
+         <obj_property name="ObjectShortName">r_RSaddr[26:23]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/r_RTaddr" type="array">
+         <obj_property name="ElementShortName">r_RTaddr[22:19]</obj_property>
+         <obj_property name="ObjectShortName">r_RTaddr[22:19]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/r_RDaddr" type="array">
+         <obj_property name="ElementShortName">r_RDaddr[18:15]</obj_property>
+         <obj_property name="ObjectShortName">r_RDaddr[18:15]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/r_imm" type="array">
+         <obj_property name="ElementShortName">r_imm[18:0]</obj_property>
+         <obj_property name="ObjectShortName">r_imm[18:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/r_immSE" type="array">
+         <obj_property name="ElementShortName">r_immSE[31:0]</obj_property>
+         <obj_property name="ObjectShortName">r_immSE[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/r_JumpAddr" type="array">
+         <obj_property name="ElementShortName">r_JumpAddr[27:2]</obj_property>
+         <obj_property name="ObjectShortName">r_JumpAddr[27:2]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/r_RSdata" type="array">
+         <obj_property name="ElementShortName">r_RSdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">r_RSdata[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/r_RTdata" type="array">
+         <obj_property name="ElementShortName">r_RTdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">r_RTdata[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/r_RTimm" type="array">
+         <obj_property name="ElementShortName">r_RTimm[31:0]</obj_property>
+         <obj_property name="ObjectShortName">r_RTimm[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/RegDST" type="logic">
+         <obj_property name="ElementShortName">RegDST</obj_property>
+         <obj_property name="ObjectShortName">RegDST</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/Branch" type="logic">
+         <obj_property name="ElementShortName">Branch</obj_property>
+         <obj_property name="ObjectShortName">Branch</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/Jump" type="logic">
+         <obj_property name="ElementShortName">Jump</obj_property>
+         <obj_property name="ObjectShortName">Jump</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/MemRead" type="logic">
+         <obj_property name="ElementShortName">MemRead</obj_property>
+         <obj_property name="ObjectShortName">MemRead</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/MemtoReg" type="logic">
+         <obj_property name="ElementShortName">MemtoReg</obj_property>
+         <obj_property name="ObjectShortName">MemtoReg</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/ALUcontrol" type="array">
+         <obj_property name="ElementShortName">ALUcontrol[4:0]</obj_property>
+         <obj_property name="ObjectShortName">ALUcontrol[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/MemWrite" type="logic">
+         <obj_property name="ElementShortName">MemWrite</obj_property>
+         <obj_property name="ObjectShortName">MemWrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/ALUsrc" type="logic">
+         <obj_property name="ElementShortName">ALUsrc</obj_property>
+         <obj_property name="ObjectShortName">ALUsrc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/RegWrite" type="logic">
+         <obj_property name="ElementShortName">RegWrite</obj_property>
+         <obj_property name="ObjectShortName">RegWrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/a_branchTrue" type="logic">
+         <obj_property name="ElementShortName">a_branchTrue</obj_property>
+         <obj_property name="ObjectShortName">a_branchTrue</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/a_result" type="array">
+         <obj_property name="ElementShortName">a_result[31:0]</obj_property>
+         <obj_property name="ObjectShortName">a_result[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/r_writeAddr" type="array">
+         <obj_property name="ElementShortName">r_writeAddr[3:0]</obj_property>
+         <obj_property name="ObjectShortName">r_writeAddr[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group193" type="group">
+      <obj_property name="label">Registers</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/ControlTB/UUT/regFile/I_clk" type="logic">
+         <obj_property name="ElementShortName">I_clk</obj_property>
+         <obj_property name="ObjectShortName">I_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/ControlTB/UUT/regFile/I_stage" type="other">
          <obj_property name="ElementShortName">I_stage</obj_property>
          <obj_property name="ObjectShortName">I_stage</obj_property>
       </wvobject>
-      <wvobject fp_name="/no_control_sim/UUTreg/I_RegRD_Sel" type="array">
-         <obj_property name="ElementShortName">I_RegRD_Sel[3:0]</obj_property>
-         <obj_property name="ObjectShortName">I_RegRD_Sel[3:0]</obj_property>
+      <wvobject fp_name="/ControlTB/UUT/regFile/I_RegWrite_Sel" type="array">
+         <obj_property name="ElementShortName">I_RegWrite_Sel[3:0]</obj_property>
+         <obj_property name="ObjectShortName">I_RegWrite_Sel[3:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/no_control_sim/UUTreg/I_RegRS_Sel" type="array">
+      <wvobject fp_name="/ControlTB/UUT/regFile/I_RegRS_Sel" type="array">
          <obj_property name="ElementShortName">I_RegRS_Sel[3:0]</obj_property>
          <obj_property name="ObjectShortName">I_RegRS_Sel[3:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/no_control_sim/UUTreg/I_RegRT_Sel" type="array">
+      <wvobject fp_name="/ControlTB/UUT/regFile/I_RegRT_Sel" type="array">
          <obj_property name="ElementShortName">I_RegRT_Sel[3:0]</obj_property>
          <obj_property name="ObjectShortName">I_RegRT_Sel[3:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/no_control_sim/UUTreg/I_WriteEnable" type="logic">
+      <wvobject fp_name="/ControlTB/UUT/regFile/I_WriteEnable" type="logic">
          <obj_property name="ElementShortName">I_WriteEnable</obj_property>
          <obj_property name="ObjectShortName">I_WriteEnable</obj_property>
       </wvobject>
-      <wvobject fp_name="/no_control_sim/UUTreg/I_WriteData" type="array">
+      <wvobject fp_name="/ControlTB/UUT/regFile/I_WriteData" type="array">
          <obj_property name="ElementShortName">I_WriteData[31:0]</obj_property>
          <obj_property name="ObjectShortName">I_WriteData[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/no_control_sim/UUTreg/I_RegDst" type="logic">
-         <obj_property name="ElementShortName">I_RegDst</obj_property>
-         <obj_property name="ObjectShortName">I_RegDst</obj_property>
-      </wvobject>
-      <wvobject fp_name="/no_control_sim/UUTreg/O_ReadDataA" type="array">
+      <wvobject fp_name="/ControlTB/UUT/regFile/O_ReadDataA" type="array">
          <obj_property name="ElementShortName">O_ReadDataA[31:0]</obj_property>
          <obj_property name="ObjectShortName">O_ReadDataA[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/no_control_sim/UUTreg/O_ReadDataB" type="array">
+      <wvobject fp_name="/ControlTB/UUT/regFile/O_ReadDataB" type="array">
          <obj_property name="ElementShortName">O_ReadDataB[31:0]</obj_property>
          <obj_property name="ObjectShortName">O_ReadDataB[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/no_control_sim/UUTreg/L_registers" type="array">
+      <wvobject fp_name="/ControlTB/UUT/regFile/L_registers" type="array">
          <obj_property name="ElementShortName">L_registers[0:15][31:0]</obj_property>
          <obj_property name="ObjectShortName">L_registers[0:15][31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
          <obj_property name="isExpanded"></obj_property>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="group377" type="group">
-      <obj_property name="label">ALU</obj_property>
+   <wvobject fp_name="vbus204" type="vbus">
+      <obj_property name="label">OPCODE</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/no_control_sim/UUTalu/opcode" type="array">
-         <obj_property name="ElementShortName">opcode[4:0]</obj_property>
-         <obj_property name="ObjectShortName">opcode[4:0]</obj_property>
+      <wvobject fp_name="/ControlTB/UUT/opcodeFile/RegDST" type="logic">
+         <obj_property name="ElementShortName">RegDST</obj_property>
+         <obj_property name="ObjectShortName">RegDST</obj_property>
       </wvobject>
-      <wvobject fp_name="/no_control_sim/UUTalu/clk" type="logic">
-         <obj_property name="ElementShortName">clk</obj_property>
-         <obj_property name="ObjectShortName">clk</obj_property>
+      <wvobject fp_name="/ControlTB/UUT/opcodeFile/Branch" type="logic">
+         <obj_property name="ElementShortName">Branch</obj_property>
+         <obj_property name="ObjectShortName">Branch</obj_property>
       </wvobject>
-      <wvobject fp_name="/no_control_sim/UUTalu/a" type="array">
-         <obj_property name="ElementShortName">a[31:0]</obj_property>
-         <obj_property name="ObjectShortName">a[31:0]</obj_property>
+      <wvobject fp_name="/ControlTB/UUT/opcodeFile/Jump" type="logic">
+         <obj_property name="ElementShortName">Jump</obj_property>
+         <obj_property name="ObjectShortName">Jump</obj_property>
       </wvobject>
-      <wvobject fp_name="/no_control_sim/UUTalu/b" type="array">
-         <obj_property name="ElementShortName">b[31:0]</obj_property>
-         <obj_property name="ObjectShortName">b[31:0]</obj_property>
+      <wvobject fp_name="/ControlTB/UUT/opcodeFile/MemRead" type="logic">
+         <obj_property name="ElementShortName">MemRead</obj_property>
+         <obj_property name="ObjectShortName">MemRead</obj_property>
       </wvobject>
-      <wvobject fp_name="/no_control_sim/UUTalu/result" type="array">
-         <obj_property name="ElementShortName">result[31:0]</obj_property>
-         <obj_property name="ObjectShortName">result[31:0]</obj_property>
+      <wvobject fp_name="/ControlTB/UUT/opcodeFile/MemtoReg" type="logic">
+         <obj_property name="ElementShortName">MemtoReg</obj_property>
+         <obj_property name="ObjectShortName">MemtoReg</obj_property>
       </wvobject>
-      <wvobject fp_name="/no_control_sim/UUTalu/enable_branch" type="logic">
-         <obj_property name="ElementShortName">enable_branch</obj_property>
-         <obj_property name="ObjectShortName">enable_branch</obj_property>
+      <wvobject fp_name="/ControlTB/UUT/opcodeFile/ALUcontrol" type="array">
+         <obj_property name="ElementShortName">ALUcontrol[4:0]</obj_property>
+         <obj_property name="ObjectShortName">ALUcontrol[4:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/no_control_sim/UUTalu/reg1" type="array">
-         <obj_property name="ElementShortName">reg1[31:0]</obj_property>
-         <obj_property name="ObjectShortName">reg1[31:0]</obj_property>
+      <wvobject fp_name="/ControlTB/UUT/opcodeFile/MemWrite" type="logic">
+         <obj_property name="ElementShortName">MemWrite</obj_property>
+         <obj_property name="ObjectShortName">MemWrite</obj_property>
       </wvobject>
-      <wvobject fp_name="/no_control_sim/UUTalu/reg2" type="array">
-         <obj_property name="ElementShortName">reg2[31:0]</obj_property>
-         <obj_property name="ObjectShortName">reg2[31:0]</obj_property>
+      <wvobject fp_name="/ControlTB/UUT/opcodeFile/ALUsrc" type="logic">
+         <obj_property name="ElementShortName">ALUsrc</obj_property>
+         <obj_property name="ObjectShortName">ALUsrc</obj_property>
       </wvobject>
-      <wvobject fp_name="/no_control_sim/UUTalu/temp1" type="array">
-         <obj_property name="ElementShortName">temp1[31:0]</obj_property>
-         <obj_property name="ObjectShortName">temp1[31:0]</obj_property>
+      <wvobject fp_name="/ControlTB/UUT/opcodeFile/RegWrite" type="logic">
+         <obj_property name="ElementShortName">RegWrite</obj_property>
+         <obj_property name="ObjectShortName">RegWrite</obj_property>
       </wvobject>
-      <wvobject fp_name="/no_control_sim/UUTalu/eb" type="logic">
-         <obj_property name="ElementShortName">eb</obj_property>
-         <obj_property name="ObjectShortName">eb</obj_property>
-      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/ControlTB/UUT/mux_regdst/SEL" type="logic">
+      <obj_property name="ElementShortName">SEL</obj_property>
+      <obj_property name="ObjectShortName">SEL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTB/UUT/mux_regdst/A" type="array">
+      <obj_property name="ElementShortName">A[3:0]</obj_property>
+      <obj_property name="ObjectShortName">A[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTB/UUT/mux_regdst/B" type="array">
+      <obj_property name="ElementShortName">B[3:0]</obj_property>
+      <obj_property name="ObjectShortName">B[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTB/UUT/mux_regdst/X" type="array">
+      <obj_property name="ElementShortName">X[3:0]</obj_property>
+      <obj_property name="ObjectShortName">X[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ControlTB/UUT/mux_regdst/width" type="other">
+      <obj_property name="ElementShortName">width</obj_property>
+      <obj_property name="ObjectShortName">width</obj_property>
    </wvobject>
 </wave_config>
