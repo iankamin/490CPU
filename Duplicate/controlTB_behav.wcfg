@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="controlTB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="controlTB" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="4565416666fs"></ZoomStartTime>
+      <ZoomEndTime time="4994916667fs"></ZoomEndTime>
+      <Cursor1Time time="4950000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="121"></NameColumnWidth>
+      <ValueColumnWidth column_width="113"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/controlTB/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controlTB/UUT/r_stages" type="other">
+      <obj_property name="ElementShortName">r_stages</obj_property>
+      <obj_property name="ObjectShortName">r_stages</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controlTB/UUT/r_PC" type="array">
+      <obj_property name="ElementShortName">r_PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r_PC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/controlTB/UUT/m_inst" type="array">
+      <obj_property name="ElementShortName">m_inst[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_inst[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus73" type="vbus">
+      <obj_property name="label">Inst Bus</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <wvobject fp_name="/controlTB/UUT/r_opcode" type="array">
+         <obj_property name="ElementShortName">r_opcode[31:27]</obj_property>
+         <obj_property name="ObjectShortName">r_opcode[31:27]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/r_RSaddr" type="array">
+         <obj_property name="ElementShortName">r_RSaddr[26:23]</obj_property>
+         <obj_property name="ObjectShortName">r_RSaddr[26:23]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/r_RTaddr" type="array">
+         <obj_property name="ElementShortName">r_RTaddr[22:19]</obj_property>
+         <obj_property name="ObjectShortName">r_RTaddr[22:19]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/r_imm" type="array">
+         <obj_property name="ElementShortName">r_imm[18:0]</obj_property>
+         <obj_property name="ObjectShortName">r_imm[18:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/controlTB/UUT/r_RDaddr" type="array">
+      <obj_property name="ElementShortName">r_RDaddr[18:15]</obj_property>
+      <obj_property name="ObjectShortName">r_RDaddr[18:15]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus46" type="vbus">
+      <obj_property name="label">Control Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/controlTB/UUT/RegDST" type="logic">
+         <obj_property name="ElementShortName">RegDST</obj_property>
+         <obj_property name="ObjectShortName">RegDST</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/Branch" type="logic">
+         <obj_property name="ElementShortName">Branch</obj_property>
+         <obj_property name="ObjectShortName">Branch</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/Jump" type="logic">
+         <obj_property name="ElementShortName">Jump</obj_property>
+         <obj_property name="ObjectShortName">Jump</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/MemRead" type="logic">
+         <obj_property name="ElementShortName">MemRead</obj_property>
+         <obj_property name="ObjectShortName">MemRead</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/MemtoReg" type="logic">
+         <obj_property name="ElementShortName">MemtoReg</obj_property>
+         <obj_property name="ObjectShortName">MemtoReg</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/ALUcontrol" type="array">
+         <obj_property name="ElementShortName">ALUcontrol[4:0]</obj_property>
+         <obj_property name="ObjectShortName">ALUcontrol[4:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/MemWrite" type="array">
+         <obj_property name="ElementShortName">MemWrite[3:0]</obj_property>
+         <obj_property name="ObjectShortName">MemWrite[3:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/ALUsrc" type="logic">
+         <obj_property name="ElementShortName">ALUsrc</obj_property>
+         <obj_property name="ObjectShortName">ALUsrc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/RegWrite" type="logic">
+         <obj_property name="ElementShortName">RegWrite</obj_property>
+         <obj_property name="ObjectShortName">RegWrite</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/controlTB/UUT/regRW/L_registers" type="array">
+      <obj_property name="ElementShortName">L_registers[0:15][31:0]</obj_property>
+      <obj_property name="ObjectShortName">L_registers[0:15][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <wvobject fp_name="/controlTB/UUT/regRW/L_registers[0]" type="array">
+         <obj_property name="ElementShortName">[0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/regRW/L_registers[1]" type="array">
+         <obj_property name="ElementShortName">[1][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/regRW/L_registers[2]" type="array">
+         <obj_property name="ElementShortName">[2][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/regRW/L_registers[3]" type="array">
+         <obj_property name="ElementShortName">[3][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/regRW/L_registers[4]" type="array">
+         <obj_property name="ElementShortName">[4][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[4][31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/regRW/L_registers[5]" type="array">
+         <obj_property name="ElementShortName">[5][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[5][31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/regRW/L_registers[6]" type="array">
+         <obj_property name="ElementShortName">[6][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[6][31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/regRW/L_registers[7]" type="array">
+         <obj_property name="ElementShortName">[7][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[7][31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/regRW/L_registers[8]" type="array">
+         <obj_property name="ElementShortName">[8][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[8][31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/regRW/L_registers[9]" type="array">
+         <obj_property name="ElementShortName">[9][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[9][31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/regRW/L_registers[10]" type="array">
+         <obj_property name="ElementShortName">[10][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[10][31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/regRW/L_registers[11]" type="array">
+         <obj_property name="ElementShortName">[11][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[11][31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/regRW/L_registers[12]" type="array">
+         <obj_property name="ElementShortName">[12][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[12][31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/regRW/L_registers[13]" type="array">
+         <obj_property name="ElementShortName">[13][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[13][31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/regRW/L_registers[14]" type="array">
+         <obj_property name="ElementShortName">[14][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[14][31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/controlTB/UUT/regRW/L_registers[15]" type="array">
+         <obj_property name="ElementShortName">[15][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[15][31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
